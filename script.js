@@ -1,29 +1,10 @@
-//your JS code here. If required.
-function daysOfAYear(year)
-{
-	if(isLeapYear)
-	{
-		console.log("366");
-	}
-	else {
-		console.log("365");
-	}
+function daysOfAYear(year) {
+    // Check if the year is a leap year
+    if((year % 4 == 0 && year % 100 != 0) || year % 400 == 0){
+        // If it's a leap year, return 366
+        return 366;
+    }else{
+        // If it's not a leap year, return 365
+        return 365;
+    }
 }
-
-function isLeapYear (year)
-{
-	return year % 400 === 0 || (year % 100 !== 0 && year % 4 === 0);
-}
-
-const readline = require('readline');
-
-const rl = readline.createInterface({
-  input: process.stdin,
-  output: process.stdout
-});
-
-rl.on('line', (year) => {
-  //Write your code here
-	daysOfAYear(year);
- 
-});
