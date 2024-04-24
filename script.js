@@ -1,7 +1,13 @@
 //your JS code here. If required.
 function daysOfAYear(year)
 {
-	return isLeapYear ? 366 : 365;
+	if(isLeapYear)
+	{
+		console.log("366");
+	}
+	else {
+		console.log("365");
+	}
 }
 
 function isLeapYear (year)
@@ -18,6 +24,6 @@ const rl = readline.createInterface({
 
 rl.on('line', (year) => {
   //Write your code here
-	console.log(daysOfAYear(year));
+	daysOfAYear(year);
  
 });
